@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .dialog {
+            text-align: center;
+            position: absolute;
+            z-index: 11;
+        }
+        
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: red;
+        }
+        
+        .dialog h2 {
+            color: #fff;
+        }
+        
+        .mark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">点击</button>
+    <script src="js/dialog.js"></script>
+    <script>
+        //获取元素
+        var btn = document.querySelector('.btn');
+        btn.onclick = function() {
+            new Dialog({
+                width: 300,
+                height: 150,
+                background: 'rgba(0,0,0,.6)',
+                close: 'X'
+            })
+        }
+    </script>
+</body>
+
+</html>
